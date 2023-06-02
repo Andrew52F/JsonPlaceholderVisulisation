@@ -1,1 +1,1 @@
-# JsonPlaceholderVisulisation
+# json-placeholder-visulisation
