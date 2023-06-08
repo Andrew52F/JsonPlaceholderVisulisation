@@ -9,20 +9,14 @@ import {
 import PostsPage from './pages/PostsPage';
 import Header from './components/Header';
 
-const App = () =>
-  // const dispatch = useDispatch();
-  // const store = useSelector((state) => state);
-  // console.log(store);
-  (
-    <div>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path='/' element={<PostsPage />} />
-          <Route path='/user' element={<div>Hello I`m User</div>} />
-          <Route path='/info' element={<div>Hello I`m Info</div>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+const App = () => (
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path='/' element={<PostsPage />} />
+      <Route path='/user/:id' element={<div>Hello I`m User</div>} />
+      <Route path='/info' element={<div>Hello I`m Info</div>} />
+    </Routes>
+  </BrowserRouter>
+);
 export default App;

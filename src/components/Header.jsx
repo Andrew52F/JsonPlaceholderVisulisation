@@ -54,7 +54,7 @@ Sidebar.propTypes = {
 const Header = () => {
   const [show, setShow] = useState(false);
   const navs = [
-    { text: 'Список постов', to: '/' },
+    { text: 'Список постов', to: '/?_limit=20&_page=1' },
     { text: 'Обо мне', to: '/info' },
   ];
   return (
