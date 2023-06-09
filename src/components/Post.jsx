@@ -19,7 +19,7 @@ const Post = ({
   <Card className='pe-2 overflow-hidden'>
     <Row>
       <Col className='col-auto pe-0 m-2'>
-        <NavLink to={`/user/${post.userId}`}>
+        <NavLink to={`/user/${post.userId}?_page=1&_limit=20`}>
           <UserImage />
         </NavLink>
       </Col>
@@ -42,7 +42,7 @@ const Post = ({
                 </ListGroup.Item>
               ))
             ) : (
-              <PostsListMessage title='У этого поста покачто отсутствуют комментарии' />
+              <PostsListMessage title='У этого поста еще нет комментарии' />
             ))}
             {commentsState === 'pending' && (
               <div className='d-flex justify-content-center py-3'>

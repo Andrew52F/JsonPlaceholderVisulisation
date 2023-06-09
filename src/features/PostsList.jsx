@@ -19,7 +19,16 @@ const PostsList = ({ title = '', path }) => {
     posts, comments, pagesCount, postsState, commentsState,
   } = useSelector((state) => state.posts);
   const [commentsPostId, setCommentsPostId] = useState(null);
-  // console.log('Search ', searchParams);
+
+  useEffect(() => {
+    if (!searchParams.has('_page') && !searchParams.has('_limit')) {
+      setSearchParams((prevParams) => {
+        prevParams.set('_page', 1);
+        prevParams.set('_limit', 20);
+        return prevParams;
+      });
+    }
+  }, []);
 
   useEffect(() => {
     dispatch({ type: 'LOAD_POSTS', payload: { searchParams, path } });
@@ -72,7 +81,7 @@ const PostsList = ({ title = '', path }) => {
   };
   return (
     <>
-      {title && <h1 className='my-4'>Список постов</h1>}
+      {title && <h1 className='my-4'>{title}</h1>}
       <Row>
         <Col className='col-lg-5'>
           <SearchInput initialValue={searchParams.get('title_like')} onSubmit={setSearchParam} />

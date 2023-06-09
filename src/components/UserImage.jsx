@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ReactComponent as UserIcon } from '../assets/user-icon.svg';
 
 const UserImage = ({ imageLink = '', options = {} }) => (
-  <div style={{ width: options.width ?? '80px', height: options.width ?? '80px' }} className='d-block  rounded-3 border border-secondary overflow-hidden flex-shrink-0'>
+  <div style={{ width: '80px', height: '80px', ...options }} className='d-block  rounded-3 border border-secondary overflow-hidden flex-shrink-0'>
     {imageLink ? (
       <img src={imageLink} alt='user' className=' w-100 h-100' />
     ) : (

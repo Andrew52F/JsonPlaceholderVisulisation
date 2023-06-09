@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-
 import postsReducer from './postsReducer';
 import userInfoReducer from './userInfoReducer';
 
