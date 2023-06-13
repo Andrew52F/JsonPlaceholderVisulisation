@@ -9,6 +9,7 @@ import {
 import PostsPage from './pages/PostsPage';
 import Header from './components/Header';
 import UserInfoPage from './pages/UserInfoPage';
+import AboutMePage from './pages/AboutMePage';
 
 const App = () => (
   <BrowserRouter>
@@ -16,7 +17,7 @@ const App = () => (
     <Routes>
       <Route path='/' element={<PostsPage />} />
       <Route path='/user/:userId' element={<UserInfoPage />} />
-      <Route path='/info' element={<div>Hello I`m Info</div>} />
+      <Route path='/about-me' element={<AboutMePage />} />
     </Routes>
   </BrowserRouter>
 );

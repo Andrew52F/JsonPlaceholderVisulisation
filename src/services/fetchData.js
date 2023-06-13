@@ -4,9 +4,7 @@ import axios from 'axios';
 const delay = (time) => new Promise((res) => setTimeout(res, time));
 
 const getJSONPlaceholderData = async (endpoint, params) => {
-  console.log('SAGA PARAMS ', params);
   const request = await axios.get(`https://jsonplaceholder.typicode.com/${endpoint}`, { params });
-  console.log('axios worked');
   await delay(500);
   return request;
 };

@@ -31,12 +31,10 @@ const initialState = {
 const userInfoReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_USER_INFO_STATE': {
-      console.log('REJECTED !!!!!');
       const newState = {
         ...state,
         userState: action.payload,
       };
-      console.log('new STATE ', newState);
       return newState;
     }
     case 'STORE_USER_INFO': {

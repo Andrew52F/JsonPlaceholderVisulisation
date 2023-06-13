@@ -66,8 +66,6 @@ const PostsList = ({ title = '', path }) => {
   const setOrderParam = (orderValue) => {
     setSearchParams((prevParams) => {
       const newParams = new URLSearchParams(prevParams);
-      console.log('ORDER PARAM ', orderValue);
-      console.log('SEARCH PARAMS ', newParams);
       if (!orderValue) {
         newParams.delete('_sort');
         newParams.delete('_order');

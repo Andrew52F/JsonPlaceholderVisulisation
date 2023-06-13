@@ -30,7 +30,7 @@ UserInfoSmall.propTypes = {
 const Sidebar = ({ show = true, onHide = () => {}, navs = [] }) => (
   <Offcanvas show={show} onHide={onHide} scroll backdrop placement='start'>
     <Offcanvas.Header closeButton={!!onHide}>
-      <Offcanvas.Title className='fw-bolder fs-4'>Menu</Offcanvas.Title>
+      <Offcanvas.Title className='fw-bolder fs-4'>Меню</Offcanvas.Title>
     </Offcanvas.Header>
     <Offcanvas.Body className='d-flex flex-column justify-content-between'>
       <Nav as='nav' className='flex-column d-grid gap-2 '>
@@ -38,7 +38,9 @@ const Sidebar = ({ show = true, onHide = () => {}, navs = [] }) => (
           <Button as={NavLink} key={to} to={to} onClick={() => onHide()} variant='outline-primary' size='lg'>{text}</Button>
         ))}
       </Nav>
-      <UserInfoSmall imageLink='https://res.cloudinary.com/deufljem3/image/upload/v1677510682/users/upk8wrl09cmxx6thpnnb.png' fullName='Петраков Андрей' email='andrew.petvic@gmail.com' />
+      <NavLink to='/about-me' onClick={() => onHide(false)} className='text-decoration-none text-reset'>
+        <UserInfoSmall imageLink='https://res.cloudinary.com/deufljem3/image/upload/v1677510682/users/upk8wrl09cmxx6thpnnb.png' fullName='Петраков Андрей' email='andrew.petvic@gmail.com' />
+      </NavLink>
     </Offcanvas.Body>
   </Offcanvas>
 );
@@ -55,7 +57,7 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const navs = [
     { text: 'Список постов', to: '/?_page=1&_limit=20' },
-    { text: 'Обо мне', to: '/info' },
+    { text: 'Обо мне', to: '/about-me' },
   ];
   return (
     <NavBar bg='light'>

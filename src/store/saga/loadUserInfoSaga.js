@@ -14,7 +14,7 @@ export function* workerLoadUserInfo(action) {
   }
 }
 
-function* watchLoadUserInfo() { // Описывает actions, которые происходят в приложении
+function* watchLoadUserInfo() {
   yield takeEvery('LOAD_USER_INFO', workerLoadUserInfo);
 }
 

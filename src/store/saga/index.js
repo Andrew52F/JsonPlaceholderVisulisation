@@ -15,7 +15,7 @@ export default function* rootSaga() {
         yield call(saga);
         break;
       } catch (e) {
-        console.log('Saga error ', e);
+        console.error('Saga error ', e);
       }
     }
   }));

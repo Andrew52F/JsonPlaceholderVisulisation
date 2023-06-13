@@ -15,7 +15,6 @@ import PostsListMessage from '../components/PostsListMessage';
 const UserInfoCard = ({ path }) => {
   const dispatch = useDispatch();
   const { userData, userState } = useSelector((state) => state.userInfo);
-  console.log('PATH ', path);
   useEffect(() => {
     dispatch({ type: 'LOAD_USER_INFO', payload: { path } });
   }, []);
