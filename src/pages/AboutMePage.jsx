@@ -30,8 +30,6 @@ BadgesCard.propTypes = {
 };
 
 const AboutMePage = () => {
-  const smth = [];
-
   const shortInfo = [
     ['Возввраст', '22 года'],
     ['Город', 'Нижний Новгород'],
