@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   Button, Container, Nav, Row, Col, ToggleButton,
 } from 'react-bootstrap';
-import NavBar from 'react-bootstrap/NavBar';
+import Navbar from 'react-bootstrap/NavBar';
 import { NavLink } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
@@ -48,7 +48,7 @@ const Header = () => {
     { text: 'Обо мне', to: '/about-me' },
   ];
   return (
-    <NavBar bg='light'>
+    <Navbar bg='light'>
       <Container fluid>
         <Row>
           <Col className='offset-1'>
@@ -67,7 +67,7 @@ const Header = () => {
         </Row>
         <Sidebar show={show} onHide={() => setShow(false)} navs={navs} />
       </Container>
-    </NavBar>
+    </Navbar>
 
   );
 };
