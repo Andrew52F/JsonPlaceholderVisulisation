@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {
   Button, Container, Nav, Row, Col, ToggleButton,
+  Navbar,
 } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/NavBar';
 import { NavLink } from 'react-router-dom';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
